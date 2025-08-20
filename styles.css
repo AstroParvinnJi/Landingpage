@@ -51,37 +51,160 @@
     }
     .btn-primary:hover { background:#ffc107; }
     
-    /* Countdown */
- .countdown-box {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  background: linear-gradient(to right, #0d47a1, #1976d2);
-  padding: 20px 10px;
-  border-radius: 8px;
-  margin: 20px auto;
-  width: fit-content;
-  flex-wrap: wrap;
+   /* Parent container for timer + form */
+    .webinar-container {
+      display: flex;
+      width: 900px;
+      margin: 0 auto;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 40px;
+      padding: 40px 20px;
+      flex-wrap: wrap;
+    }
+
+    /* Left Section (Heading + Timer + Register Button) */
+    .left-section {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+  padding: 30px;
 }
-.time-box {
-  background: white;
-  color: #1976d2;
+.astro-image {
+  max-width: 100%;
   border-radius: 10px;
-  width: 80px;
-  height: 80px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
-.time-box .num {
-  font-size: 26px;
+.webinar-info {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 15px 0;
   font-weight: bold;
 }
-.time-box .label {
-  font-size: 13px;
-  color: #000;
+.info-item {
+  background: #ffe6c0;
+  font-size: 15px;
+  padding: 10px 15px;
+  border-radius: 8px;
 }
+.rating {
+  margin-top: 20px;
+}
+.rating .stars {
+  font-size: 20px;
+  color: gold;
+}
+    .timer-section {
+      padding-top: 15px;
+      width: 45%;
+      flex: 1;
+      margin: 0 auto;
+      min-width: 300px;
+      text-align: center;
+    }
+    .timer-section h2 {
+      font-size: 22px;
+      margin-bottom: 5px;
+    }
+    .timer-section p {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .countdown-box {
+      padding-top: 50px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      background: linear-gradient(to right, #0d47a1, #1976d2);
+      padding: 20px 10px;
+      border-radius: 8px;
+      margin: 20px auto;
+      width:35%;
+      flex-wrap: wrap;
+    }
+    .time-box {
+      background: white;
+      color: #1976d2;
+      border-radius: 10px;
+      width: 80px;
+      height: 80px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .time-box .num {
+      font-size: 26px;
+      font-weight: bold;
+    }
+    .time-box .label {
+      font-size: 13px;
+      color: #000;
+    }
+
+    .timer-section .btn-register {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 30px;
+      background: linear-gradient(to right, #ff9900, #ff5e00);
+      color: #fff;
+      border-radius: 8px;
+      font-size: 16px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .timer-section .btn-register:hover {
+      background: linear-gradient(to right, #ff5e00, #ff9900);
+    }
+
+    /* Right Section (Form) */
+    form {
+      flex: 1;
+      width: 55%;
+      height: ;
+      background: #f9f9f9;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    form label {
+      display: block;
+      text-align: left;
+      margin-top: 15px;
+      font-weight: 600;
+    }
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    .note {
+      font-size: 13px;
+      text-align: left;
+      color: red;
+      margin-top: 20px;
+      font-weight: normal;
+    }
+    button {
+      margin-top: 20px;
+      padding: 12px;
+      width: 100%;
+      background: linear-gradient(to right, #ff9900, #ff5e00);
+      border: none;
+      color: white;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: linear-gradient(to right, #ff5e00, #ff9900);
+    }
+
 .container h1 { 
   font-size:2.5rem;
   margin-bottom:0.5rem;
@@ -296,6 +419,14 @@
       flex-direction: row;
       padding-left: 40px;
     }
+      .webinar-container {
+    gap: 20px;
+    padding: 30px 15px;
+  }
+  form {
+    max-width: 400px;
+  }
+}
 }
 
 @media (max-width: 720px) {
@@ -362,6 +493,19 @@
       gap: 40px;
       margin: 0 auto;
     }
+      .webinar-container {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .timer-section {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  form {
+    width: 100%;
+  }
+
 }
 
 @media (max-width: 480px) {
@@ -450,10 +594,40 @@
         padding-left: 10px;
     }
     .cta-banner{
-      padding-top: 30px;
-      padding-right: 40px;
-      gap: 40px;
+      height: auto;
+      width: 100%;
     }
+  .countdown-box {
+    gap: 10px;
+    padding: 15px;
+    width: 100%;
+    flex-wrap: nowrap;
+  }
+  .time-box {
+    width: 65px;
+    height: 65px;
+  }
+  .time-box .num {
+    font-size: 20px;
+  }
+  .time-box .label {
+    font-size: 11px;
+  }
+  .webinar-container{
+    flex-direction: column;
+    width: 100%;
+  }
+  form {
+    padding: 20px;
+    width: 100%;
+  }
+  form label {
+    font-size: 14px;
+  }
+  button {
+    font-size: 14px;
+    padding: 10px;
+  }
 }
 
 @media (max-width: 360px) {
@@ -546,12 +720,6 @@
     width: 100%;
     padding-left: 10px;
   }
-
-  .cta-banner {
-    gap: 40px;
-    padding-top: 30px;
-    padding-right: 20px;
-  }
   .cta-text{
     font-size: 17px;
   }
@@ -560,7 +728,7 @@
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 360px) {
   .btn-primary {
     font-size: 14px;
     padding: 0.4rem 1rem;
@@ -569,6 +737,35 @@
   .cta-text {
     font-size: 18px;
   }
+  .webinar-container{
+    flex-direction: column;
+    width: 100%;
+  }
+  .countdown-box{
+    flex-direction: row;
+     flex-wrap: nowrap;
+     width: 80%;
+  }
+  .time-box {
+    width: 55px;
+    height: 55px;
+  }
+  .time-box .num {
+    font-size: 18px;
+  }
+  .time-box .label {
+    font-size: 10px;
+  }
+  form {
+    width: 100%;
+    padding: 15px;
+  }
+  button {
+    font-size: 13px;
+    padding: 8px;
+  }
+}
+
 }
 
     
