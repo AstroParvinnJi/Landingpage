@@ -116,16 +116,15 @@ src="https://www.facebook.com/tr?id=2672442646183534&ev=PageView&noscript=1"
       
 
      <!-- WhatsApp Registration Button -->
-<a id="registerBtn" 
+<button type="submit" 
    href="https://chat.whatsapp.com/I6eyozWDH66KppJJZnKXup?mode=ac_t" 
-   target="_blank" 
-   style="display:inline-block; padding:12px 20px; background:#25D366; color:#fff; font-size:16px; border-radius:8px; text-decoration:none; font-weight:bold;">
+   target="_blank" >
    Register Now For Free
-</a>
+</button>
 
 <script>
   // Pixel Event Trigger on Button Click
-  document.getElementById('registerBtn').addEventListener('click', function() {
+  document.getElementById('submit').addEventListener('click', function() {
     fbq('track', 'CompleteRegistration');
   });
 </script>
