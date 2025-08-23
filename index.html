@@ -116,6 +116,11 @@ src="https://www.facebook.com/tr?id=2672442646183534&ev=PageView&noscript=1"
       
 
       <button type="submit">Register Now For Free</button>
+      <script>
+document.getElementById('submit').addEventListener('click', function() {
+  fbq('track', 'CompleteRegistration');
+});
+</script>
     </form>
   </div>
 <!--<div style=" height: 50px; padding-top: 20px;">
