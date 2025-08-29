@@ -1,4 +1,4 @@
-        const eventDate = new Date("Aug 31, 2025 20:00:00").getTime();
+        const eventDate = new Date("Sep 05, 2025 20:00:00").getTime();
     setInterval(() => {
       const now = new Date().getTime();
       const diff = eventDate - now;
